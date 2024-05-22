@@ -1,0 +1,64 @@
+div {
+    border: 2px solid #000;
+    background-color: aquamarine;
+}
+
+input {
+    border-radius: 10px;
+
+}
+
+h1 {
+    color: darkorange;
+    background-color:lightseagreen;
+}
+
+h2 {
+    color: darkorange;
+    background-color:lightseagreen;
+}
+
+label {
+    font: 15px;
+    color: darkorange;
+}
+
+#genderLabel {
+    font: 15px;
+    background-color: lightseagreen;
+}
+
+#userLabel {
+    font-size: 15px;
+    background-color: lightseagreen;
+}
+
+#passLabel {
+    font-size: 15px;
+    background-color: lightseagreen;
+}
+
+.textDesign {
+    color: blueviolet;
+}
+
+button {
+    color: blue;
+backgorund-color:lightseagreen;
+}
+
+
+
+.link-style:link {
+color: aqua;
+background-color:lightseagreen;
+}
+
+.link-style:hover {
+    color: aqua;
+    background-color:yellow;
+}
+.link-style:active {
+    color:aqua;
+    background-color:purple;
+}
