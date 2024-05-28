@@ -9,12 +9,12 @@
 </head>
 </head>
 
-<body>
-        <div class="container">
-            <p class="menu-label is-size-4 has-text-warning ">STUDENT INFORMATION SYSTEM</p>
-            <div class="columns">
-                <div class="column is-half-quarter">
+<body class="has-background-dark">
+    
+     <div class="columns">
+                <div class="column is-one-quarter">
                     <aside class="menu">
+                    <h1 class="title is-size-9 has-text-warning ">STUDENT INFORMATION SYSTEM</h1>
                     <ul class="menu-list">
                     <li><a class="has-text-info" href="#student-list">Student List</a></li>
                     <li><a class="has-text-info" href="#Courses">Courses</a></li>
@@ -23,60 +23,42 @@
                 </ul>
             </aside>
             </div>
-                    <div class="columns">
-                        <section id="student list" class="section"></section>
-                        <p class="menu-label is-size-3 has-text-warning">STUDENT LIST</p>
+
+            
+                    <div class="column">
+                        
+                        <section id="student list" class="section">
+                        <h1 class="title has-text-warning">STUDENT LIST</h1>
                       <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                         <thead>
                             <tr>
                                 <th>STUDENT ID</th>
-                                <th>NAME</th>
+                                <th>LASTNAME</th>
+                                <th>FIRSTNAME</th>
+                                <th>MIDDLENAME</th>
                                 <th>SEX</th>
+                                <th>BIRTHDAY</th>
                                 <th>ADDRESS</th>
-                                <th>COURSE</th>
+                                <th>COURSE ID</th>
+                                
                             </tr>
-                        </thead>
+                       
                         <tbody>
-
+                        {% for student in students %}
                             <tr>
-                                <td>1</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td>2</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{ student[0] }}</td>
+                                <td>{{ student[1] }}</td>
+                                <td>{{ student[2] }}</td>
+                                <td>{{ student[3] }}</td>
+                                <td>{{ student[4] }}</td>
+                                <td>{{ student[5] }}</td>
+                                <td>{{ student[6] }}</td>
+                                <td>{{ student[7] }}</td>
                                 
                             </tr>
-                            <tr>
-                                <td>4</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                
-                            </tr>
+                        {% endfor %}
+                        </thead>
+                        </tbody>
                         
 </body>
 </html>

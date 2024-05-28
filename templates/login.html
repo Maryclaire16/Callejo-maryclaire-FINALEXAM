@@ -17,20 +17,22 @@
         <label>Error Message:</label>
         <br><br>
 
-        <label id="userLabel" class="text-design">Username:</label>
-        <input type="text">
-        <br><br>
+        <form action="check-user" method="POST">
 
-        <label id="passLabel" class="text-design">Password:</label>
-        <input type="text">
-        <br><br>
+            <label id="userLabel" class="text-design">Username:</label>
+            <input name="username"type="text">
+            <br><br>
 
-        <a href="#" class="link-style">Forgot Password<br></a>
-        <br>
+            <label id="passLabel" class="text-design">Password:</label>
+            <input name="password"type="text">
+            <br><br>
 
-        <button>Login</button>
-        <br><br>
+            <a href="#" class="link-style">Forgot Password<br></a>
+            <br>
 
+            <button>Login</button>
+            <br><br>
+        </form>
         <a href="register.html" class="link-style">Register Here</a>
 
     </center>
