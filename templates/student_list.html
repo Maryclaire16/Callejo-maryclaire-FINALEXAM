@@ -16,10 +16,10 @@
                     <aside class="menu">
                     <h1 class="title is-size-9 has-text-warning ">STUDENT INFORMATION SYSTEM</h1>
                     <ul class="menu-list">
-                    <li><a class="has-text-info" href="#student-list">Student List</a></li>
-                    <li><a class="has-text-info" href="#Courses">Courses</a></li>
-                    <li><a class="has-text-info" href="#Grades">Grades</a></li>
-                    <li><a class="has-text-info" href="#Reports">Reports</a></li>
+                    <li><a class="has-text-black" href="#student-list">Student List</a></li>
+                    <li><a class="has-text-black" href="#Courses">Courses</a></li>
+                    <li><a class="has-text-black" href="#Grades">Grades</a></li>
+                    <li><a class="has-text-black" href="#Reports">Reports</a></li>
                 </ul>
             </aside>
             </div>
@@ -43,22 +43,41 @@
                                 
                             </tr>
                        
-                        <tbody>
-                        {% for student in students %}
-                            <tr>
-                                <td>{{ student[0] }}</td>
-                                <td>{{ student[1] }}</td>
-                                <td>{{ student[2] }}</td>
-                                <td>{{ student[3] }}</td>
-                                <td>{{ student[4] }}</td>
-                                <td>{{ student[5] }}</td>
-                                <td>{{ student[6] }}</td>
-                                <td>{{ student[7] }}</td>
-                                
-                            </tr>
-                        {% endfor %}
-                        </thead>
-                        </tbody>
                         
-</body>
-</html>
+                            <tbody>
+                                {% for student in students %}
+                                    <tr>
+                                        <td>{{ student[0] }}</td>
+                                        <td>{{ student[1] }}</td>
+                                        <td>{{ student[2] }}</td>
+                                        <td>{{ student[3] }}</td>
+                                        <td>{{ student[4] }}</td>
+                                        <td>{{ student[5] }}</td>
+                                        <td>{{ student[6] }}</td>
+                                        <td>{{ student[7] }}</td>
+                                        <td>
+                                            <a href="{{ url_for('update_students',student_id=student[0]) }}"class="button is-warning is-small" onclick="updateFunction">Update</a>
+                                            <form action="{{ url_for('delete_student',student_id=student[0]) }}" method="POST" style="display:inline;">
+                                                <button type="submit" class="button is-danger is-small" onclick="deleteFunction">Delete</button>
+        
+                                                <script>
+                                                    function updateFunction() {
+                                                        alert("Update button clicked");
+                                                    }
+                                                    function deleteFunction() {
+                                                        alert("Delete button clicked");
+                                                    }
+                                                </script>
+                                                </form>
+                                        </td>
+                                        
+                                    </tr>
+                                {% endfor %}
+                                </thead>
+                                </tbody>
+                                </table>
+                            </section>
+                            </div>
+                            </div>                      
+        </body>
+        </html>

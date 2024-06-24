@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+</head>
+<body>
+    <h1>Update Student</h1>
+    <form method="POST">
+        <label>Last Name: <input type="text" name="last_name" value="{{ student[1] }}"></label><br>
+        <label>First Name: <input type="text" name="first_name" value="{{ student[2] }}"></label><br>
+        <label>Middle Name: <input type="text" name="middle_name" value="{{ student[3] }}"></label><br>
+        <label>Sex: <input type="text" name="sex" value="{{ student[4] }}"></label><br>
+        <label>Birthday: <input type="text" name="birthday" value="{{ student[5] }}"></label><br>
+        <label>Address: <input type="text" name="address" value="{{ student[6] }}"></label><br>
+        <label>Course ID: <input type="text" name="course_id" value="{{ student[7] }}"></label><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
